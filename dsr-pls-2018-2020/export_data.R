@@ -9,7 +9,7 @@ library(jsonlite)
 library(stringr)
 
 # Ajuste o caminho para o seu arquivo SQLite
-DB_PATH <- "data_raw\\2026-05-28_PLs_DSR_2018-2020 - pdfs.sqlite3"
+DB_PATH <- "data_raw\\sql_raw.sqlite3"
 
 con <- dbConnect(SQLite(), DB_PATH)
 
