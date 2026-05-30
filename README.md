@@ -82,7 +82,8 @@ quarto render dsr_pilot.qmd
 - O banco SQLite do Taguette não está versionado por conter dados de projeto em andamento
 
 ## To-do
-
+- [ ] Adicionar raspadores em R
+- [ ] Adicionar pdfs completos das justificativas
 - [ ] Cruzar PLs com autores e partidos via API da Câmara
 - [ ] Visualizações sobre posicionamento por partido
 - [ ] Visualizações sobre posicionamento por conteúdo argumentativo
