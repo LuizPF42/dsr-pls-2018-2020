@@ -2,7 +2,7 @@
 
 Análise exploratória de corpus codificado — piloto.
 
-**Visualização interativa:** https://luizpf42.github.io/dsr-pls-2018-2020/
+**Visualização interativa:** [https://luizpf42.github.io/dsr-pls-2018-2020/](https://luizpf42.github.io/dsr-pls-2018-2020/dsr_pilot.html)
 (publicada automaticamente via GitHub Pages — ver seção [Publicação](#publicação))
 
 ## Origem e equipe
