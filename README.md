@@ -12,7 +12,7 @@ A extração do corpus e o desenvolvimento das ferramentas de análise foram rea
 
 ## Sobre o projeto
 
-Este repositório contém o código e os dados de uma análise exploratória de proposições legislativas brasileiras (2018–2020) relacionadas a direitos sexuais e reprodutivos (DSR). O corpus foi codificado qualitativamente via [Taguette](https://www.taguette.org/about.html) e exportado para análise e visualização em R e Quarto.
+Este repositório contém o código e os dados de uma análise exploratória das justificativas das justificativas legislativas de proposições legislativas brasileiras (2018–2020) relacionadas a direitos sexuais e reprodutivos (DSR). O corpus foi codificado qualitativamente via [Taguette](https://www.taguette.org/about.html) e exportado para análise e visualização em R e Quarto.
 
 As visualizações partem dos códigos analíticos atribuídos às proposições e incluem: frequência de códigos por polaridade, distribuição de polaridade por documento, posição média dos códigos no texto, n-gramas por categoria, e exploração individual por PL/PDL.
 
@@ -89,6 +89,6 @@ quarto render dsr_pilot.qmd
 - [ ] Análise de co-autoria e redes partidárias por posição
 - [ ] Série temporal: evolução do volume de proposições por ano (1988–2020)
 - [ ] Comparação entre PLs aprovados, arquivados e em tramitação
-- [ ] Extração e análise dos textos integrais (não só ementas) para recodificação
-- [ ] Expansão do corpus para outras casas legislativas (Senado, assembleias estaduais)
+- [ ] Extração e análise dos textos legais (não só justificativas) para recodificação
+- [ ] Expansão do corpus para outras casas legislativas (Senado)
 - [ ] Integração com dados de votações nominais para verificar coerência entre autoria e voto
