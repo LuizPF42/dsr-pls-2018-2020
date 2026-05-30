@@ -2,8 +2,9 @@
 
 Análise exploratória de corpus codificado — piloto.
 
-**Visualização interativa:** [https://luizpf42.github.io/dsr-pls-2018-2020/](https://luizpf42.github.io/dsr-pls-2018-2020/dsr_pilot.html)
-(publicada automaticamente via GitHub Pages — ver seção [Publicação](#publicação))
+**Site do projeto:** https://luizpf42.github.io/dsr-pls-2018-2020/
+
+**Relatório de visualizações:** https://luizpf42.github.io/dsr-pls-2018-2020/dsr_pilot.html
 
 ## Origem e equipe
 
@@ -13,7 +14,7 @@ A extração do corpus e o desenvolvimento das ferramentas de análise foram rea
 
 ## Sobre o projeto
 
-Este repositório contém o código e os dados de uma análise exploratória das justificativas das justificativas legislativas de proposições legislativas brasileiras (2018–2020) relacionadas a direitos sexuais e reprodutivos (DSR). O corpus foi codificado qualitativamente via [Taguette](https://www.taguette.org/about.html) e exportado para análise e visualização em R e Quarto.
+Este repositório contém o código e os dados de uma análise exploratória das justificativas legislativas de proposições brasileiras (2018–2020) relacionadas a direitos sexuais e reprodutivos (DSR). O corpus foi codificado qualitativamente via [Taguette](https://www.taguette.org/about.html) e exportado para análise e visualização em R e Quarto.
 
 As visualizações partem dos códigos analíticos atribuídos às proposições e incluem: frequência de códigos por polaridade, distribuição de polaridade por documento, posição média dos códigos no texto, n-gramas por categoria, e exploração individual por PL/PDL.
 
@@ -48,12 +49,14 @@ NAMESPACE                # gerado pelo roxygen2
 R/                       # código do pacote (funções, doc do pacote)
 data-raw/                # preparação dos dados (convenção usethis::use_data_raw)
   export_data.R          # exporta o banco SQLite -> inst/relatorio/dsr_data.json
-  sql_raw.sqlite3        # banco SQLite do Taguette (dados brutos)
-inst/relatorio/          # relatório Quarto (instalado com o pacote)
-  _quarto.yml            # configuração do site Quarto
-  index.qmd              # documento com as visualizações (Observable JS)
+  sql_raw.sqlite3        # banco SQLite do Taguette (dados brutos, não versionado)
+inst/relatorio/          # relatório Quarto
+  _quarto.yml            # configuração do site Quarto (output-dir aponta para docs/)
+  index.qmd              # página inicial (descrição do projeto)
+  dsr_pilot.qmd          # relatório de visualizações (Observable JS)
   dsr_data.json          # dados exportados (consumidos pelo relatório)
-.github/workflows/       # CI: publica o relatório no GitHub Pages
+docs/                    # site renderizado (servido pelo GitHub Pages)
+.github/workflows/       # CI (opcional)
 ```
 
 ## Reprodução local
@@ -72,8 +75,8 @@ install.packages(c("DBI", "RSQLite", "dplyr", "jsonlite", "stringr"))
 A partir da **raiz do projeto**:
 
 1. Clone o repositório
-2. Garanta que `data-raw/sql_raw.sqlite3` está presente (já versionado)
-3. Gere os dados do relatório (opcional — o `dsr_data.json` já vem versionado):
+2. Coloque o banco `data-raw/sql_raw.sqlite3` na pasta (não é versionado)
+3. Gere os dados do relatório:
 
 ```r
 source("data-raw/export_data.R")
@@ -85,43 +88,33 @@ source("data-raw/export_data.R")
 quarto render inst/relatorio
 ```
 
-5. Abra `inst/relatorio/_site/index.html` no browser
+5. Abra o site gerado na pasta `docs/`
 
 ## Publicação
 
-O relatório é um site Quarto em `inst/relatorio/`. Duas formas de publicá-lo:
+O site é publicado via **GitHub Pages**, servido a partir da pasta `docs/` na branch `main`.
 
-### GitHub Pages (recomendado)
+O `_quarto.yml` está configurado com `output-dir: ../../docs`, de modo que `quarto render inst/relatorio` gera o site diretamente na pasta `docs/` da raiz. Para publicar uma atualização:
 
-O workflow [`.github/workflows/publish.yml`](.github/workflows/publish.yml) renderiza
-o relatório e o publica no branch `gh-pages` a cada push na `main`. Para ativar:
+1. Rode `quarto render inst/relatorio`
+2. Faça commit e push da pasta `docs/`
+3. O GitHub Pages atualiza o site automaticamente em alguns minutos
 
-1. Em **Settings → Pages**, defina **Source: Deploy from a branch** e selecione o
-   branch `gh-pages` (pasta `/ (root)`).
-2. O site ficará disponível em `https://<usuario>.github.io/dsr-pls-2018-2020/`.
+Configuração do Pages: **Settings → Pages → Source: Deploy from a branch**, branch `main`, pasta `/docs`.
 
 Documentação: <https://quarto.org/docs/publishing/github-pages.html>
-
-### Quarto Pub (alternativa)
-
-Publicação manual, sem CI, a partir da máquina local:
-
-```bash
-quarto publish quarto-pub inst/relatorio
-```
-
-Documentação: <https://quarto.org/docs/publishing/quarto-pub.html>
 
 ## Notas técnicas
 
 - O HTML gerado é autocontido (`embed-resources: true`): um único arquivo sem dependências externas
 - Os dados ficam embutidos no JSON; o browser não acessa o banco SQLite diretamente
 - As visualizações usam [Observable Plot](https://observablehq.com/plot/) via Quarto OJS
-- O banco SQLite do Taguette fica em `data-raw/` (convenção de dados brutos do pacote)
+- O banco SQLite do Taguette fica em `data-raw/` e não é versionado
 
 ## To-do
+
 - [ ] Adicionar raspadores em R
-- [ ] Adicionar pdfs completos das justificativas
+- [ ] Adicionar PDFs completos das justificativas
 - [ ] Cruzar PLs com autores e partidos via API da Câmara
 - [ ] Visualizações sobre posicionamento por partido
 - [ ] Visualizações sobre posicionamento por conteúdo argumentativo
