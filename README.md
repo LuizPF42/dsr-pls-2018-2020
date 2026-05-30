@@ -2,7 +2,8 @@
 
 Análise exploratória de corpus codificado — piloto.
 
-**Visualização interativa:** https://rpubs.com/Luizpf42/dsr-pls-2018-2020
+**Visualização interativa:** https://luizpf42.github.io/dsr-pls-2018-2020/
+(publicada automaticamente via GitHub Pages — ver seção [Publicação](#publicação))
 
 ## Origem e equipe
 
@@ -37,11 +38,22 @@ O corpus final foi restrito às proposições do período 2018–2020 para anál
 
 ## Estrutura do repositório
 
+O projeto segue a estrutura de um pacote R (convenções do
+[usethis](https://usethis.r-lib.org/)/[devtools](https://devtools.r-lib.org/) e do
+livro [R Packages](https://r-pkgs.org/)):
+
 ```
-dsr_pilot.qmd       # documento Quarto com as visualizações (Observable JS)
-export_data.R       # script R que exporta o banco SQLite para dsr_data.json
-dsr_data.json       # dados exportados (gerado por export_data.R)
-data_raw/           # banco SQLite do Taguette (não versionado)
+DESCRIPTION              # metadados do pacote
+NAMESPACE                # gerado pelo roxygen2
+R/                       # código do pacote (funções, doc do pacote)
+data-raw/                # preparação dos dados (convenção usethis::use_data_raw)
+  export_data.R          # exporta o banco SQLite -> inst/relatorio/dsr_data.json
+  sql_raw.sqlite3        # banco SQLite do Taguette (dados brutos)
+inst/relatorio/          # relatório Quarto (instalado com o pacote)
+  _quarto.yml            # configuração do site Quarto
+  index.qmd              # documento com as visualizações (Observable JS)
+  dsr_data.json          # dados exportados (consumidos pelo relatório)
+.github/workflows/       # CI: publica o relatório no GitHub Pages
 ```
 
 ## Reprodução local
@@ -49,7 +61,7 @@ data_raw/           # banco SQLite do Taguette (não versionado)
 ### Pré-requisitos
 
 - [Quarto](https://quarto.org/docs/get-started/) (>= 1.4)
-- R com os pacotes:
+- R com os pacotes de exportação:
 
 ```r
 install.packages(c("DBI", "RSQLite", "dplyr", "jsonlite", "stringr"))
@@ -57,29 +69,55 @@ install.packages(c("DBI", "RSQLite", "dplyr", "jsonlite", "stringr"))
 
 ### Passos
 
+A partir da **raiz do projeto**:
+
 1. Clone o repositório
-2. Coloque o arquivo `.sqlite3` na pasta `data_raw/`
-3. Ajuste `DB_PATH` em `export_data.R` se necessário
-4. Rode o script de exportação no R:
+2. Garanta que `data-raw/sql_raw.sqlite3` está presente (já versionado)
+3. Gere os dados do relatório (opcional — o `dsr_data.json` já vem versionado):
 
 ```r
-source("export_data.R")
+source("data-raw/export_data.R")
 ```
 
-5. Renderize o documento Quarto:
+4. Renderize o relatório Quarto:
 
 ```bash
-quarto render dsr_pilot.qmd
+quarto render inst/relatorio
 ```
 
-6. Abra `dsr_pilot.html` no browser
+5. Abra `inst/relatorio/_site/index.html` no browser
+
+## Publicação
+
+O relatório é um site Quarto em `inst/relatorio/`. Duas formas de publicá-lo:
+
+### GitHub Pages (recomendado)
+
+O workflow [`.github/workflows/publish.yml`](.github/workflows/publish.yml) renderiza
+o relatório e o publica no branch `gh-pages` a cada push na `main`. Para ativar:
+
+1. Em **Settings → Pages**, defina **Source: Deploy from a branch** e selecione o
+   branch `gh-pages` (pasta `/ (root)`).
+2. O site ficará disponível em `https://<usuario>.github.io/dsr-pls-2018-2020/`.
+
+Documentação: <https://quarto.org/docs/publishing/github-pages.html>
+
+### Quarto Pub (alternativa)
+
+Publicação manual, sem CI, a partir da máquina local:
+
+```bash
+quarto publish quarto-pub inst/relatorio
+```
+
+Documentação: <https://quarto.org/docs/publishing/quarto-pub.html>
 
 ## Notas técnicas
 
 - O HTML gerado é autocontido (`embed-resources: true`): um único arquivo sem dependências externas
 - Os dados ficam embutidos no JSON; o browser não acessa o banco SQLite diretamente
 - As visualizações usam [Observable Plot](https://observablehq.com/plot/) via Quarto OJS
-- O banco SQLite do Taguette não está versionado por conter dados de projeto em andamento
+- O banco SQLite do Taguette fica em `data-raw/` (convenção de dados brutos do pacote)
 
 ## To-do
 - [ ] Adicionar raspadores em R
