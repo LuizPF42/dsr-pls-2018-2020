@@ -4,11 +4,36 @@ Análise exploratória de corpus codificado — piloto.
 
 **Visualização interativa:** https://rpubs.com/Luizpf42/dsr-pls-2018-2020
 
+## Origem e equipe
+
+Este projeto deriva de pesquisas desenvolvidas pelo [Núcleo de Estudos sobre o Crime e a Pena](https://direitosp.fgv.br/nucleos-de-pesquisa/nucleo-estudos-sobre-crime-pena) da FGV Direito SP, coordenado pela profa. [Marta Rodriguez de Assis Machado](http://lattes.cnpq.br/8601296185222408).
+
+A extração do corpus e o desenvolvimento das ferramentas de análise foram realizados por [Luiz Claudio Pimenta Filho](http://lattes.cnpq.br/1096752907228813). A codificação e análise qualitativa das proposições foram realizadas por [Matheus de Barros](http://lattes.cnpq.br/3707929725934308).
+
 ## Sobre o projeto
 
-Este repositório contém o código e os dados de uma análise exploratória de proposições legislativas brasileiras (2018–2020) relacionadas a direitos sexuais e reprodutivos (DSR). O corpus foi codificado qualitativamente no Recogito e exportado para análise e visualização em R e Quarto.
+Este repositório contém o código e os dados de uma análise exploratória das justificativas das justificativas legislativas de proposições legislativas brasileiras (2018–2020) relacionadas a direitos sexuais e reprodutivos (DSR). O corpus foi codificado qualitativamente via [Taguette](https://www.taguette.org/about.html) e exportado para análise e visualização em R e Quarto.
 
-As visualizações incluem: frequência de códigos analíticos por polaridade, distribuição de polaridade por documento, posição média dos códigos no texto, n-gramas por categoria, e exploração individual por PL/PDL.
+As visualizações partem dos códigos analíticos atribuídos às proposições e incluem: frequência de códigos por polaridade, distribuição de polaridade por documento, posição média dos códigos no texto, n-gramas por categoria, e exploração individual por PL/PDL.
+
+## Extração do corpus
+
+As proposições foram extraídas da [API de Dados Abertos da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html), cobrindo o período de 1988 a 2020. Para cada ano, foram baixados os arquivos JSON de proposições disponibilizados pela API.
+
+A seleção das proposições relevantes foi feita por busca textual nas ementas, combinando dois grupos de termos:
+
+**Termos autossuficientes** — qualquer ocorrência já qualifica a proposição:
+
+- Variações de: *aborto*, *nascituro*, *feto*, *embrião*, *anencefalia*
+- Expressões: *interrupção da gravidez*, *interrupção da gestação*
+- Expressões: *direito à vida*, *dignidade da vida*
+
+**Termos combinados** — qualificam a proposição quando aparecem juntos:
+
+- Referências ao Código Penal (termo *Código Penal*, número *2.848* ou variações)
+- Combinadas com referências aos artigos 124 a 128 (que tipificam o aborto no CP)
+
+O corpus final foi restrito às proposições do período 2018–2020 para análise qualitativa.
 
 ## Estrutura do repositório
 
@@ -16,7 +41,7 @@ As visualizações incluem: frequência de códigos analíticos por polaridade, 
 dsr_pilot.qmd       # documento Quarto com as visualizações (Observable JS)
 export_data.R       # script R que exporta o banco SQLite para dsr_data.json
 dsr_data.json       # dados exportados (gerado por export_data.R)
-data_raw/           # banco SQLite original do Recogito (não versionado)
+data_raw/           # banco SQLite do Taguette (não versionado)
 ```
 
 ## Reprodução local
@@ -54,4 +79,17 @@ quarto render dsr_pilot.qmd
 - O HTML gerado é autocontido (`embed-resources: true`): um único arquivo sem dependências externas
 - Os dados ficam embutidos no JSON; o browser não acessa o banco SQLite diretamente
 - As visualizações usam [Observable Plot](https://observablehq.com/plot/) via Quarto OJS
-- O banco SQLite original não está versionado por conter dados de projeto em andamento
+- O banco SQLite do Taguette não está versionado por conter dados de projeto em andamento
+
+## To-do
+- [ ] Adicionar raspadores em R
+- [ ] Adicionar pdfs completos das justificativas
+- [ ] Cruzar PLs com autores e partidos via API da Câmara
+- [ ] Visualizações sobre posicionamento por partido
+- [ ] Visualizações sobre posicionamento por conteúdo argumentativo
+- [ ] Análise de co-autoria e redes partidárias por posição
+- [ ] Série temporal: evolução do volume de proposições por ano (1988–2020)
+- [ ] Comparação entre PLs aprovados, arquivados e em tramitação
+- [ ] Extração e análise dos textos legais (não só justificativas) para recodificação
+- [ ] Expansão do corpus para outras casas legislativas (Senado)
+- [ ] Integração com dados de votações nominais para verificar coerência entre autoria e voto
