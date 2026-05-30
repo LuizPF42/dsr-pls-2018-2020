@@ -1,6 +1,12 @@
 ---
 title: "PLs sobre Direitos Sexuais e Reprodutivos (2018–2020)"
-subtitle: "Análise exploratória de corpus codificado — piloto"
+subtitle: "Análise exploratória de corpus codificado — piloto - **Não citar**"
+author:
+  - name: Luiz Claudio Pimenta Filho
+    note: "Extração e ferramentas"
+  - name: Matheus de Barros
+    note: "Análise qualitativa"
+institute: "Núcleo de Estudos sobre o Crime e a Pena — FGV Direito SP"
 format:
   html:
     theme: cosmo
