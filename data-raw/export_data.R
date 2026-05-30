@@ -1,6 +1,8 @@
 # export_data.R
-# Exporta o banco Recogito (SQLite) para dsr_data.json
-# Rode este script uma vez antes de `quarto render dsr_pilot.qmd`
+# Exporta o banco Taguette (SQLite) para inst/relatorio/dsr_data.json
+# Rode a partir da RAIZ do projeto, antes de renderizar o relatorio:
+#   source("data-raw/export_data.R")
+#   quarto render inst/relatorio
 
 library(DBI)
 library(RSQLite)
@@ -8,8 +10,9 @@ library(dplyr)
 library(jsonlite)
 library(stringr)
 
-# Ajuste o caminho para o seu arquivo SQLite
-DB_PATH <- "data_raw\\sql_raw.sqlite3"
+# Caminhos relativos a raiz do projeto
+DB_PATH  <- "data-raw/sql_raw.sqlite3"
+OUT_PATH <- "inst/relatorio/dsr_data.json"
 
 con <- dbConnect(SQLite(), DB_PATH)
 
@@ -210,5 +213,5 @@ output <- list(
   meta         = list(total_docs = 45L, total_highlights = 287L, total_codes = 48L)
 )
 
-write_json(output, "dsr_data.json", auto_unbox = TRUE, pretty = TRUE)
-cat("dsr_data.json gerado com sucesso.\n")
+write_json(output, OUT_PATH, auto_unbox = TRUE, pretty = TRUE)
+cat("Arquivo gerado com sucesso:", OUT_PATH, "\n")

@@ -1,0 +1,10 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "PLs DSR 2018-2020"
+  description: "Analise exploratoria de PLs sobre Direitos Sexuais e Reprodutivos (2018-2020)"
+  repo-url: https://github.com/LuizPF42/dsr-pls-2018-2020
+  page-footer:
+    center: "Nucleo de Estudos sobre o Crime e a Pena - FGV Direito SP"

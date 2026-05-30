@@ -1,0 +1,14 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj.bak
+
+# Quarto
+inst/relatorio/_site/
+inst/relatorio/.quarto/
+/.quarto/
+
+# rsconnect (publicacao antiga via rpubs)
+rsconnect/

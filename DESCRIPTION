@@ -1,0 +1,33 @@
+Package: dsrPLs2018
+Title: Analise de PLs sobre Direitos Sexuais e Reprodutivos (2018-2020)
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Luiz Claudio", "Pimenta Filho", role = c("aut", "cre"),
+           email = "luiz.pimenta@example.org",
+           comment = "Extracao do corpus e ferramentas de analise"),
+    person("Matheus", "de Barros", role = "aut",
+           comment = "Codificacao e analise qualitativa"),
+    person("Marta Rodriguez de Assis", "Machado", role = "ctb",
+           comment = "Coordenacao - Nucleo de Estudos sobre o Crime e a Pena"),
+    person(family = "FGV Direito SP", role = "cph")
+  )
+Description: Analise exploratoria de um corpus codificado de justificativas
+    de proposicoes legislativas brasileiras (2018-2020) relacionadas a
+    direitos sexuais e reprodutivos (DSR). O corpus foi codificado
+    qualitativamente via Taguette e exportado para visualizacao em Quarto
+    com Observable Plot. O codigo de preparacao dos dados esta em data-raw/
+    e o relatorio em inst/relatorio/.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.1)
+Imports:
+    DBI,
+    RSQLite,
+    dplyr,
+    jsonlite,
+    stringr
+URL: https://github.com/LuizPF42/dsr-pls-2018-2020
+BugReports: https://github.com/LuizPF42/dsr-pls-2018-2020/issues

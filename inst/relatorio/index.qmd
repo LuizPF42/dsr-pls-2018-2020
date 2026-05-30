@@ -103,7 +103,7 @@ Plot.plot({
 
 ## Polaridade por documento
 
-Cada barra representa um PL ou PDL. As barras são normalizadas para 100% para facilitar comparação. <span style="color:#D85A30">■</span> segmentos contra DSR, <span style="color:#1D9E75">■</span> segmentos pró DSR.
+Cada barra representa um PL ou PDL, normalizada para 100% para facilitar a comparação. <span style="color:#D85A30">■</span> segmentos contra DSR, <span style="color:#1D9E75">■</span> segmentos pró DSR. As barras estão ordenadas da maior para a menor proporção pró DSR.
 
 ```{ojs}
 //| label: polarity-chart
@@ -113,12 +113,15 @@ polarityNorm = data.doc_polarity.flatMap(d => {
   const contraPct = total > 0 ? d.contra / total : 0
   const proPct    = total > 0 ? d.pro    / total : 0
   return [
-    { doc: d.doc, x1: 0,         x2: contraPct, type: "contra", total: d.total, pct: Math.round(contraPct * 100) },
-    { doc: d.doc, x1: contraPct, x2: contraPct + proPct, type: "pro", total: d.total, pct: Math.round(proPct * 100) }
+    { doc: d.doc, x1: 0,         x2: contraPct,           type: "contra", total: d.total, pct: Math.round(contraPct * 100) },
+    { doc: d.doc, x1: contraPct, x2: contraPct + proPct,  type: "pro",    total: d.total, pct: Math.round(proPct * 100) }
   ]
 })
 
-docOrder = data.doc_polarity.slice().sort((a, b) => b.total - a.total).map(d => d.doc)
+docOrder = data.doc_polarity.slice()
+  .map(d => ({ doc: d.doc, proPct: (d.contra + d.pro) > 0 ? d.pro / (d.contra + d.pro) : 0 }))
+  .sort((a, b) => b.proPct - a.proPct)
+  .map(d => d.doc)
 
 Plot.plot({
   marginLeft: 160,
