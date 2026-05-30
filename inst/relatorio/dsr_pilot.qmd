@@ -1,0 +1,326 @@
+---
+title: "PLs sobre Direitos Sexuais e Reprodutivos (2018–2020)"
+subtitle: "Análise exploratória de corpus codificado — piloto - **Não citar**"
+author:
+  - name: Luiz Claudio Pimenta Filho
+    note: "Extração e ferramentas"
+  - name: Matheus de Barros
+    note: "Análise qualitativa"
+institute: "Núcleo de Estudos sobre o Crime e a Pena — FGV Direito SP"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    toc-title: "Visualizações"
+    embed-resources: true
+    page-layout: full
+execute:
+  echo: false
+---
+
+```{ojs}
+data = FileAttachment("dsr_data.json").json()
+
+proCodes = [
+  "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+  "Defesa do direito ao aborto legal",
+  "Autonomia e direitos sexuais e reprodutivos",
+  "Saúde física e psicológica da mulher (pró DSR)",
+  "Direito Internacional (pró direitos sexuais e reprodutivos)",
+  "Interpretação sistemática pró DSR",
+  "Menção a jurista (pró DSR)",
+  "Fortalecimento da via penal (pró direitos sexuais e reprodutivos)"
+]
+
+contraCodes = [
+  "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+  "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+  "Início da vida desde a concepção",
+  "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+  "Direito à vida do feto",
+  "Saúde física e psicológica da mulher (contra DSR)",
+  "Vontade popular",
+  "Assassinato de bebês/nascituro/embriões/fetos",
+  "Direito Civil e direitos do feto",
+  "Dignidade do feto",
+  "Condenação à morte por crime dos pais",
+  "Direito Internacional (contra direitos sexuais e reprodutivos)",
+  "Interpretação sistemática contra DSR",
+  "Argumento científico contra DSR",
+  "Lei Natural",
+  "Soberania Nacional (contra DSR)",
+  "Combate ao acesso ao aborto",
+  "Contra o aborto legal",
+  "Contra pesquisas com embriões",
+  "Política internacional conservadora",
+  "Argumento ou referência religiosa",
+  "Menção a jurista (contra DSR)",
+  "Benefício econômico contra aborto",
+  "Caracterização negativa de mulheres"
+]
+
+function getColor(code) {
+  if (proCodes.indexOf(code) >= 0) return "#1D9E75"
+  if (contraCodes.indexOf(code) >= 0) return "#D85A30"
+  return "#888780"
+}
+```
+
+## Frequência de códigos
+
+Distribuição dos segmentos codificados por categoria analítica. Cores indicam polaridade: <span style="color:#D85A30">■</span> contra DSR, <span style="color:#1D9E75">■</span> pró DSR, <span style="color:#888780">■</span> neutro/misto.
+
+```{ojs}
+//| label: freq-chart
+
+Plot.plot({
+  marginLeft: 320,
+  marginRight: 60,
+  height: 900,
+  x: { label: "Segmentos codificados", grid: true },
+  y: { label: null },
+  marks: [
+    Plot.barX(data.tag_freq, {
+      x: "n",
+      y: "code",
+      fill: d => getColor(d.code),
+      sort: { y: "-x" },
+      tip: true
+    }),
+    Plot.text(data.tag_freq, {
+      x: "n",
+      y: "code",
+      text: "n",
+      dx: 6,
+      fontSize: 11,
+      fill: "#5F5E5A",
+      sort: { y: "-x" }
+    })
+  ]
+})
+```
+
+## Polaridade por documento
+
+Cada barra representa um PL ou PDL, normalizada para 100% para facilitar a comparação. <span style="color:#D85A30">■</span> segmentos contra DSR, <span style="color:#1D9E75">■</span> segmentos pró DSR. As barras estão ordenadas da maior para a menor proporção pró DSR.
+
+```{ojs}
+//| label: polarity-chart
+
+polarityNorm = data.doc_polarity.flatMap(d => {
+  const total = d.contra + d.pro
+  const contraPct = total > 0 ? d.contra / total : 0
+  const proPct    = total > 0 ? d.pro    / total : 0
+  return [
+    { doc: d.doc, x1: 0,         x2: contraPct,           type: "contra", total: d.total, pct: Math.round(contraPct * 100) },
+    { doc: d.doc, x1: contraPct, x2: contraPct + proPct,  type: "pro",    total: d.total, pct: Math.round(proPct * 100) }
+  ]
+})
+
+docOrder = data.doc_polarity.slice()
+  .map(d => ({ doc: d.doc, proPct: (d.contra + d.pro) > 0 ? d.pro / (d.contra + d.pro) : 0 }))
+  .sort((a, b) => b.proPct - a.proPct)
+  .map(d => d.doc)
+
+Plot.plot({
+  marginLeft: 160,
+  marginRight: 40,
+  height: 700,
+  x: {
+    label: "Proporção de segmentos (contra ← | → pró DSR)",
+    tickFormat: d => `${Math.round(d * 100)}%`,
+    grid: true,
+    domain: [0, 1]
+  },
+  y: { label: null, domain: docOrder },
+  marks: [
+    Plot.barX(polarityNorm, {
+      x1: "x1",
+      x2: "x2",
+      y: "doc",
+      fill: d => d.type === "pro" ? "#1D9E75" : "#D85A30",
+      title: d => `${d.type === "pro" ? "Pró DSR" : "Contra DSR"}: ${d.pct}% (${d.total} segmentos total)`,
+      tip: true
+    }),
+    Plot.ruleX([0.5], { stroke: "#B4B2A9", strokeDasharray: "4,2" })
+  ]
+})
+```
+
+## Posição média dos códigos no texto
+
+Onde cada código tende a aparecer dentro dos documentos: 0 = início, 1 = fim. Tamanho do círculo = número de ocorrências. Revela a estrutura retórica: argumentos fundacionais aparecem antes, argumentos consequentes depois.
+
+```{ojs}
+//| label: position-chart
+
+Plot.plot({
+  marginLeft: 280,
+  marginRight: 40,
+  height: 700,
+  x: {
+    label: "Posição média no documento (0 = início · 1 = fim)",
+    domain: [0, 1],
+    grid: true
+  },
+  y: { label: null },
+  marks: [
+    Plot.dot(data.positions, {
+      x: "avg_pos",
+      y: "code",
+      r: d => Math.max(4, Math.min(16, 3 + d.n * 0.5)),
+      fill: d => getColor(d.code),
+      opacity: 0.85,
+      sort: { y: "x" },
+      tip: true
+    }),
+    Plot.ruleX([0.5], { stroke: "#B4B2A9", strokeDasharray: "4,2" })
+  ]
+})
+```
+
+## N-gramas por código
+
+Vocabulário recorrente dentro de cada categoria analítica. Bigrams e trigrams revelam as expressões-chave que caracterizam cada argumento no corpus.
+
+```{ojs}
+//| label: ngrams-selector
+
+viewof selectedCode = Inputs.select(
+  data.ngrams.map(d => d.code),
+  {
+    label: "Código analítico",
+    format: d => {
+      const entry = data.ngrams.find(x => x.code === d)
+      return `${d} (${entry ? entry.n : ""} segmentos)`
+    }
+  }
+)
+```
+
+```{ojs}
+//| label: ngrams-display
+
+{
+  const entry = data.ngrams.find(d => d.code === selectedCode)
+  if (!entry) return html`<p>Selecione um código.</p>`
+
+  const col = getColor(selectedCode)
+  const maxB = entry.bigrams.length > 0 ? entry.bigrams[0][2] : 1
+  const maxT = entry.trigrams.length > 0 ? entry.trigrams[0][3] : 1
+
+  const bigramRows = entry.bigrams.map(([w1, w2, n]) => {
+    const pct = Math.round(n / maxB * 100)
+    return html`<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">
+      <div style="flex:1;font-size:13px;">
+        <span style="background:#F0EEE8;border-radius:4px;padding:2px 7px;">${w1}</span>
+        <span style="color:#888;font-size:11px;margin:0 2px;">+</span>
+        <span style="background:#F0EEE8;border-radius:4px;padding:2px 7px;">${w2}</span>
+      </div>
+      <div style="width:100px;height:8px;background:#EEECE6;border-radius:99px;overflow:hidden;">
+        <div style="width:${pct}%;height:100%;background:${col};opacity:0.7;border-radius:99px;"></div>
+      </div>
+      <div style="width:20px;font-size:12px;color:#888;text-align:right;">${n}</div>
+    </div>`
+  })
+
+  const trigramRows = entry.trigrams.map(([w1, w2, w3, n]) => {
+    const pct = Math.round(n / maxT * 100)
+    return html`<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;">
+      <div style="flex:1;font-size:13px;">
+        <span style="background:#F0EEE8;border-radius:4px;padding:2px 7px;">${w1}</span>
+        <span style="color:#888;font-size:11px;margin:0 2px;">·</span>
+        <span style="background:#F0EEE8;border-radius:4px;padding:2px 7px;">${w2}</span>
+        <span style="color:#888;font-size:11px;margin:0 2px;">·</span>
+        <span style="background:#F0EEE8;border-radius:4px;padding:2px 7px;">${w3}</span>
+      </div>
+      <div style="width:100px;height:8px;background:#EEECE6;border-radius:99px;overflow:hidden;">
+        <div style="width:${pct}%;height:100%;background:${col};opacity:0.7;border-radius:99px;"></div>
+      </div>
+      <div style="width:20px;font-size:12px;color:#888;text-align:right;">${n}</div>
+    </div>`
+  })
+
+  return html`<div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1rem;">
+    <div>
+      <div style="font-size:11px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Bigrams</div>
+      ${bigramRows}
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">Trigrams</div>
+      ${trigramRows}
+    </div>
+  </div>`
+}
+```
+
+---
+
+*Corpus: 45 documentos · 287 segmentos codificados · 48 códigos analíticos. Período: 2018–2020. Dados: Recogito.*
+
+## Documentos
+
+Cards clicáveis por PL/PDL. Cor da borda indica polaridade dominante. Clique em um documento para ver a distribuição de códigos.
+
+```{ojs}
+//| label: doc-grid
+
+viewof selectedDoc = {
+  const container = html`<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:1.5rem;"></div>`
+  let current = null
+
+  const sorted = data.doc_polarity.slice().sort((a,b) => b.total - a.total)
+  sorted.forEach(d => {
+    const pol = d.polarity
+    const borderColor = pol === "pro" ? "#1D9E75" : pol === "contra" ? "#D85A30" : "#888780"
+    const label = pol === "pro" ? "pró DSR" : pol === "contra" ? "contra DSR" : "neutro"
+
+    const card = html`<div style="border:0.5px solid #ccc;border-left:3px solid ${borderColor};border-radius:6px;padding:10px 12px;cursor:pointer;">
+      <div style="font-size:12px;font-weight:500;margin-bottom:4px;">${d.doc}</div>
+      <div style="font-size:11px;color:#888;">${d.total} seg. · ${label}</div>
+    </div>`
+
+    card.addEventListener("click", () => {
+      if (current) current.style.background = ""
+      card.style.background = "rgba(0,0,0,0.05)"
+      current = card
+      container.value = d.doc
+      container.dispatchEvent(new Event("input"))
+    })
+    container.appendChild(card)
+  })
+
+  container.value = null
+  return container
+}
+```
+
+```{ojs}
+//| label: doc-detail
+
+{
+  if (!selectedDoc) return html`<p style="color:#888;font-size:13px;">Clique em um documento para ver os detalhes.</p>`
+
+  const codes = data.doc_codes[selectedDoc]
+  if (!codes || codes.length === 0) return html`<p style="color:#888;font-size:13px;">Sem dados para este documento.</p>`
+
+  const maxN = codes[0].n
+  const rows = codes.map(d => {
+    const col = getColor(d.code)
+    const pct = Math.round(d.n / maxN * 100)
+    return html`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+      <div style="flex:1;font-size:13px;">${d.code}</div>
+      <div style="width:120px;height:8px;background:#EEECE6;border-radius:99px;overflow:hidden;">
+        <div style="width:${pct}%;height:100%;background:${col};opacity:0.8;border-radius:99px;"></div>
+      </div>
+      <div style="width:20px;font-size:12px;color:#888;text-align:right;">${d.n}</div>
+    </div>`
+  })
+
+  return html`<div style="margin-top:0.5rem;">
+    <div style="font-size:14px;font-weight:500;margin-bottom:12px;">${selectedDoc}</div>
+    ${rows}
+  </div>`
+}
+```
