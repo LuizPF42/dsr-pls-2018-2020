@@ -20,10 +20,6 @@ As proposições foram extraídas da [API de Dados Abertos da Câmara dos Deputa
 
 A seleção das proposições relevantes foi feita por busca textual nas ementas, combinando dois grupos de termos:
 
-## Extração do corpus
-
-As proposições foram extraídas da [API de Dados Abertos da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html), cobrindo o período de 1988 a 2020. Para cada ano, foram baixados os arquivos JSON de proposições disponibilizados pela API.
-
 A seleção das proposições relevantes foi feita por busca textual nas ementas, combinando dois grupos de termos:
 
 **Termos autossuficientes** — qualquer ocorrência já qualifica a proposição:
