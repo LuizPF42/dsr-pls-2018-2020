@@ -1,0 +1,2412 @@
+{
+  "tag_freq": [
+    {
+      "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+      "n": 40
+    },
+    {
+      "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+      "n": 22
+    },
+    {
+      "code": "Início da vida desde a concepção",
+      "n": 15
+    },
+    {
+      "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+      "n": 15
+    },
+    {
+      "code": "Direito à vida do feto",
+      "n": 15
+    },
+    {
+      "code": "Saúde física e psicológica da mulher (contra DSR)",
+      "n": 14
+    },
+    {
+      "code": "Vontade popular",
+      "n": 13
+    },
+    {
+      "code": "Defesa do direito ao aborto legal",
+      "n": 10
+    },
+    {
+      "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+      "n": 9
+    },
+    {
+      "code": "Direito Internacional (contra direitos sexuais e reprodutivos)",
+      "n": 9
+    },
+    {
+      "code": "Assassinato de bebês/nascituro/embriões/fetos",
+      "n": 9
+    },
+    {
+      "code": "Interpretação sistemática contra DSR",
+      "n": 8
+    },
+    {
+      "code": "Autonomia e direitos sexuais e reprodutivos",
+      "n": 8
+    },
+    {
+      "code": "Direito Civil e direitos do feto",
+      "n": 7
+    },
+    {
+      "code": "Condenação à morte por crime dos pais",
+      "n": 6
+    },
+    {
+      "code": "Dignidade do feto",
+      "n": 5
+    },
+    {
+      "code": "Combate ao acesso ao aborto",
+      "n": 5
+    },
+    {
+      "code": "Argumento científico contra DSR",
+      "n": 5
+    },
+    {
+      "code": "Soberania Nacional (contra DSR)",
+      "n": 4
+    },
+    {
+      "code": "Saúde física e psicológica da mulher (pró DSR)",
+      "n": 4
+    },
+    {
+      "code": "Precedente judicial contra DSR",
+      "n": 4
+    },
+    {
+      "code": "Lei Natural",
+      "n": 4
+    },
+    {
+      "code": "Direito Internacional (pró direitos sexuais e reprodutivos)",
+      "n": 4
+    },
+    {
+      "code": "Contra o aborto legal",
+      "n": 4
+    },
+    {
+      "code": "Adoção",
+      "n": 4
+    },
+    {
+      "code": "Sobre o artigo 128 do CP",
+      "n": 3
+    },
+    {
+      "code": "Extensão de direitos",
+      "n": 3
+    },
+    {
+      "code": "Política internacional conservadora",
+      "n": 2
+    },
+    {
+      "code": "Menção a jurista (pró DSR)",
+      "n": 2
+    },
+    {
+      "code": "Menção a Roe vs. Wade",
+      "n": 2
+    },
+    {
+      "code": "Interpretação sistemática pró DSR",
+      "n": 2
+    },
+    {
+      "code": "Contra pesquisas com embriões",
+      "n": 2
+    },
+    {
+      "code": "Caracterização negativa de mulheres",
+      "n": 2
+    },
+    {
+      "code": "Benefício econômico contra aborto",
+      "n": 2
+    },
+    {
+      "code": "Argumento ou referência religiosa",
+      "n": 2
+    },
+    {
+      "code": "Problemas socioeconômicos levam ao aborto (contra DSR)",
+      "n": 1
+    },
+    {
+      "code": "Movimentos sociais contra o aborto",
+      "n": 1
+    },
+    {
+      "code": "Menção a jurista (contra DSR)",
+      "n": 1
+    },
+    {
+      "code": "Menção a filósofo/teórico do direito",
+      "n": 1
+    },
+    {
+      "code": "Fortalecimento da via penal (pró direitos sexuais e reprodutivos)",
+      "n": 1
+    },
+    {
+      "code": "Eutanásia e suicídio assistido",
+      "n": 1
+    },
+    {
+      "code": "Direito à Vida",
+      "n": 1
+    },
+    {
+      "code": "Contra a discriminação do nascituro",
+      "n": 1
+    },
+    {
+      "code": "Contra a clonagem",
+      "n": 1
+    },
+    {
+      "code": "Contra a autonomia da gestante",
+      "n": 1
+    },
+    {
+      "code": "Argumento sobre democracia (contra DSR)",
+      "n": 1
+    },
+    {
+      "code": "Aborto provocado por terceiro sem consentimento da gestante",
+      "n": 1
+    },
+    {
+      "code": "Aborto por terceiro com lesão ou morte da gestante",
+      "n": 1
+    }
+  ],
+  "doc_polarity": [
+    {
+      "doc": "PL-2893-2019",
+      "pro": 0,
+      "contra": 29,
+      "total": 36,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-1945-2020",
+      "pro": 0,
+      "contra": 16,
+      "total": 17,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PDL-250-2020",
+      "pro": 0,
+      "contra": 13,
+      "total": 13,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PDL-472-2020",
+      "pro": 9,
+      "contra": 4,
+      "total": 13,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PDL-413-2020",
+      "pro": 12,
+      "contra": 0,
+      "total": 12,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-580-2020",
+      "pro": 0,
+      "contra": 12,
+      "total": 12,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-518-2020",
+      "pro": 0,
+      "contra": 9,
+      "total": 11,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-11105-2018",
+      "pro": 0,
+      "contra": 6,
+      "total": 10,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PDL-385-2020",
+      "pro": 9,
+      "contra": 0,
+      "total": 9,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PDL-428-2020",
+      "pro": 9,
+      "contra": 0,
+      "total": 9,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PDL-73-2020",
+      "pro": 0,
+      "contra": 9,
+      "total": 9,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-1979-2020",
+      "pro": 0,
+      "contra": 5,
+      "total": 9,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-3415-2019",
+      "pro": 0,
+      "contra": 8,
+      "total": 9,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-4149-2019",
+      "pro": 0,
+      "contra": 8,
+      "total": 9,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-261-2019",
+      "pro": 0,
+      "contra": 7,
+      "total": 8,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-581-2020",
+      "pro": 0,
+      "contra": 6,
+      "total": 7,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PDL-410-2020",
+      "pro": 5,
+      "contra": 1,
+      "total": 6,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-564-2019",
+      "pro": 0,
+      "contra": 6,
+      "total": 6,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-10774-2018",
+      "pro": 0,
+      "contra": 5,
+      "total": 5,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-4297-2020",
+      "pro": 5,
+      "contra": 0,
+      "total": 5,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PDL-251-2020",
+      "pro": 0,
+      "contra": 4,
+      "total": 4,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PDL-381-2020",
+      "pro": 4,
+      "contra": 0,
+      "total": 4,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-10569-2018",
+      "pro": 0,
+      "contra": 2,
+      "total": 4,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-1787-2019",
+      "pro": 0,
+      "contra": 4,
+      "total": 4,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-4150-2019",
+      "pro": 0,
+      "contra": 4,
+      "total": 4,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PDL-259-2020",
+      "pro": 0,
+      "contra": 3,
+      "total": 3,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PDL-271-2020",
+      "pro": 0,
+      "contra": 3,
+      "total": 3,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PDL-383-2020",
+      "pro": 3,
+      "contra": 0,
+      "total": 3,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PDL-409-2020",
+      "pro": 3,
+      "contra": 0,
+      "total": 3,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-1008-2019",
+      "pro": 0,
+      "contra": 3,
+      "total": 3,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-260-2019",
+      "pro": 0,
+      "contra": 3,
+      "total": 3,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-4550-2020",
+      "pro": 3,
+      "contra": 0,
+      "total": 3,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-5799-2019",
+      "pro": 0,
+      "contra": 3,
+      "total": 3,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-6333-2019",
+      "pro": 0,
+      "contra": 3,
+      "total": 3,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-9559-2018",
+      "pro": 3,
+      "contra": 0,
+      "total": 3,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-1006-2019",
+      "pro": 0,
+      "contra": 2,
+      "total": 2,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-1007-2019",
+      "pro": 0,
+      "contra": 1,
+      "total": 2,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-1803-2019",
+      "pro": 2,
+      "contra": 0,
+      "total": 2,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-4515-2020",
+      "pro": 2,
+      "contra": 0,
+      "total": 2,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-5276-2020",
+      "pro": 2,
+      "contra": 0,
+      "total": 2,
+      "polarity": "pro"
+    },
+    {
+      "doc": "PL-537-2020",
+      "pro": 0,
+      "contra": 1,
+      "total": 2,
+      "polarity": "contra"
+    },
+    {
+      "doc": "PL-1009-2019",
+      "pro": 0,
+      "contra": 0,
+      "total": 1,
+      "polarity": "neutral"
+    }
+  ],
+  "positions": [
+    {
+      "code": "Sobre o artigo 128 do CP",
+      "avg_pos": 0.228,
+      "n": 3
+    },
+    {
+      "code": "Menção a Roe vs. Wade",
+      "avg_pos": 0.329,
+      "n": 2
+    },
+    {
+      "code": "Argumento científico contra DSR",
+      "avg_pos": 0.387,
+      "n": 5
+    },
+    {
+      "code": "Lei Natural",
+      "avg_pos": 0.453,
+      "n": 4
+    },
+    {
+      "code": "Direito Internacional (contra direitos sexuais e reprodutivos)",
+      "avg_pos": 0.47,
+      "n": 9
+    },
+    {
+      "code": "Dignidade do feto",
+      "avg_pos": 0.525,
+      "n": 5
+    },
+    {
+      "code": "Política internacional conservadora",
+      "avg_pos": 0.526,
+      "n": 2
+    },
+    {
+      "code": "Início da vida desde a concepção",
+      "avg_pos": 0.545,
+      "n": 15
+    },
+    {
+      "code": "Caracterização negativa de mulheres",
+      "avg_pos": 0.604,
+      "n": 2
+    },
+    {
+      "code": "Direito à vida do feto",
+      "avg_pos": 0.611,
+      "n": 15
+    },
+    {
+      "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+      "avg_pos": 0.62,
+      "n": 40
+    },
+    {
+      "code": "Defesa do direito ao aborto legal",
+      "avg_pos": 0.645,
+      "n": 10
+    },
+    {
+      "code": "Contra o aborto legal",
+      "avg_pos": 0.658,
+      "n": 4
+    },
+    {
+      "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+      "avg_pos": 0.659,
+      "n": 22
+    },
+    {
+      "code": "Assassinato de bebês/nascituro/embriões/fetos",
+      "avg_pos": 0.688,
+      "n": 9
+    },
+    {
+      "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+      "avg_pos": 0.702,
+      "n": 9
+    },
+    {
+      "code": "Condenação à morte por crime dos pais",
+      "avg_pos": 0.72,
+      "n": 6
+    },
+    {
+      "code": "Saúde física e psicológica da mulher (contra DSR)",
+      "avg_pos": 0.723,
+      "n": 14
+    },
+    {
+      "code": "Interpretação sistemática contra DSR",
+      "avg_pos": 0.725,
+      "n": 8
+    },
+    {
+      "code": "Vontade popular",
+      "avg_pos": 0.732,
+      "n": 13
+    },
+    {
+      "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+      "avg_pos": 0.744,
+      "n": 15
+    },
+    {
+      "code": "Precedente judicial contra DSR",
+      "avg_pos": 0.757,
+      "n": 4
+    },
+    {
+      "code": "Combate ao acesso ao aborto",
+      "avg_pos": 0.76,
+      "n": 5
+    },
+    {
+      "code": "Direito Civil e direitos do feto",
+      "avg_pos": 0.788,
+      "n": 7
+    },
+    {
+      "code": "Autonomia e direitos sexuais e reprodutivos",
+      "avg_pos": 0.816,
+      "n": 8
+    },
+    {
+      "code": "Argumento ou referência religiosa",
+      "avg_pos": 0.82,
+      "n": 2
+    },
+    {
+      "code": "Saúde física e psicológica da mulher (pró DSR)",
+      "avg_pos": 0.852,
+      "n": 4
+    },
+    {
+      "code": "Direito Internacional (pró direitos sexuais e reprodutivos)",
+      "avg_pos": 0.861,
+      "n": 4
+    },
+    {
+      "code": "Adoção",
+      "avg_pos": 0.869,
+      "n": 4
+    },
+    {
+      "code": "Menção a jurista (pró DSR)",
+      "avg_pos": 0.874,
+      "n": 2
+    },
+    {
+      "code": "Extensão de direitos",
+      "avg_pos": 0.879,
+      "n": 3
+    },
+    {
+      "code": "Interpretação sistemática pró DSR",
+      "avg_pos": 0.891,
+      "n": 2
+    },
+    {
+      "code": "Benefício econômico contra aborto",
+      "avg_pos": 0.925,
+      "n": 2
+    },
+    {
+      "code": "Soberania Nacional (contra DSR)",
+      "avg_pos": 0.933,
+      "n": 4
+    },
+    {
+      "code": "Contra pesquisas com embriões",
+      "avg_pos": 0.975,
+      "n": 2
+    }
+  ],
+  "ngrams": [
+    {
+      "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+      "n": 1,
+      "bigrams": [
+        [
+          "violência",
+          "sexual",
+          15
+        ],
+        [
+          "profissionais",
+          "saúde",
+          11
+        ],
+        [
+          "autoridade",
+          "policial",
+          10
+        ],
+        [
+          "ministério",
+          "saúde",
+          9
+        ],
+        [
+          "mulheres",
+          "meninas",
+          8
+        ],
+        [
+          "código",
+          "penal",
+          7
+        ],
+        [
+          "interrupção",
+          "gravidez",
+          7
+        ],
+        [
+          "vítimas",
+          "violência",
+          7
+        ]
+      ],
+      "trigrams": [
+        [
+          "vítimas",
+          "violência",
+          "sexual",
+          7
+        ],
+        [
+          "apresentação",
+          "mesa",
+          "pdl",
+          5
+        ],
+        [
+          "art",
+          "ato",
+          "mesa",
+          4
+        ],
+        [
+          "art",
+          "ricd",
+          "art",
+          4
+        ],
+        [
+          "através",
+          "ponto",
+          "sdr",
+          4
+        ]
+      ]
+    },
+    {
+      "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+      "n": 1,
+      "bigrams": [
+        [
+          "ministério",
+          "saúde",
+          11
+        ],
+        [
+          "nota",
+          "técnica",
+          9
+        ],
+        [
+          "competência",
+          "exclusiva",
+          4
+        ],
+        [
+          "direito",
+          "vida",
+          4
+        ],
+        [
+          "pelo",
+          "ministério",
+          4
+        ],
+        [
+          "poder",
+          "legislativo",
+          4
+        ],
+        [
+          "apresentação",
+          "pdl",
+          3
+        ],
+        [
+          "direitos",
+          "obrigações",
+          3
+        ]
+      ],
+      "trigrams": [
+        [
+          "pelo",
+          "ministério",
+          "saúde",
+          4
+        ],
+        [
+          "competência",
+          "exclusiva",
+          "poder",
+          3
+        ],
+        [
+          "exclusiva",
+          "poder",
+          "legislativo",
+          3
+        ],
+        [
+          "abordar",
+          "temas",
+          "devem",
+          2
+        ],
+        [
+          "abster",
+          "abordar",
+          "temas",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "Início da vida desde a concepção",
+      "n": 1,
+      "bigrams": [
+        [
+          "desde",
+          "concepção",
+          5
+        ],
+        [
+          "nascituro",
+          "pessoa",
+          5
+        ],
+        [
+          "direitos",
+          "humanos",
+          3
+        ],
+        [
+          "pessoa",
+          "humana",
+          3
+        ],
+        [
+          "administração",
+          "federal",
+          2
+        ],
+        [
+          "câmara",
+          "deputados",
+          2
+        ],
+        [
+          "código",
+          "penal",
+          2
+        ],
+        [
+          "constituição",
+          "federal",
+          2
+        ]
+      ],
+      "trigrams": [
+        [
+          "direitos",
+          "humanos",
+          "fundamentais",
+          2
+        ],
+        [
+          "humana",
+          "desde",
+          "concepção",
+          2
+        ],
+        [
+          "lei",
+          "tem",
+          "objetivo",
+          2
+        ],
+        [
+          "nascituro",
+          "pessoa",
+          "humana",
+          2
+        ],
+        [
+          "vida",
+          "humana",
+          "desde",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+      "n": 1,
+      "bigrams": [
+        [
+          "código",
+          "penal",
+          5
+        ],
+        [
+          "contra",
+          "vida",
+          5
+        ],
+        [
+          "crimes",
+          "contra",
+          3
+        ],
+        [
+          "crimes",
+          "dolosos",
+          3
+        ],
+        [
+          "dolosos",
+          "contra",
+          3
+        ],
+        [
+          "lei",
+          "tem",
+          3
+        ],
+        [
+          "presente",
+          "projeto",
+          3
+        ],
+        [
+          "projeto",
+          "lei",
+          3
+        ]
+      ],
+      "trigrams": [
+        [
+          "crimes",
+          "dolosos",
+          "contra",
+          3
+        ],
+        [
+          "dolosos",
+          "contra",
+          "vida",
+          3
+        ],
+        [
+          "lei",
+          "tem",
+          "objetivo",
+          3
+        ],
+        [
+          "presente",
+          "projeto",
+          "lei",
+          3
+        ],
+        [
+          "projeto",
+          "lei",
+          "tem",
+          3
+        ]
+      ]
+    },
+    {
+      "code": "Direito à vida do feto",
+      "n": 1,
+      "bigrams": [
+        [
+          "constituição",
+          "federal",
+          5
+        ],
+        [
+          "direito",
+          "vida",
+          4
+        ],
+        [
+          "aborto",
+          "provocado",
+          3
+        ],
+        [
+          "bens",
+          "jurídicos",
+          3
+        ],
+        [
+          "caros",
+          "sociedade",
+          3
+        ],
+        [
+          "ceifada",
+          "aborto",
+          3
+        ],
+        [
+          "conduta",
+          "altíssimo",
+          3
+        ],
+        [
+          "correções",
+          "porque",
+          3
+        ]
+      ],
+      "trigrams": [
+        [
+          "bens",
+          "jurídicos",
+          "caros",
+          3
+        ],
+        [
+          "caros",
+          "sociedade",
+          "sendo",
+          3
+        ],
+        [
+          "ceifada",
+          "aborto",
+          "provocado",
+          3
+        ],
+        [
+          "correções",
+          "porque",
+          "pode",
+          3
+        ],
+        [
+          "dúvida",
+          "vida",
+          "precioso",
+          3
+        ]
+      ]
+    },
+    {
+      "code": "Saúde física e psicológica da mulher (contra DSR)",
+      "n": 1,
+      "bigrams": [
+        [
+          "estado",
+          "anterior",
+          2
+        ],
+        [
+          "gestante",
+          "seja",
+          2
+        ],
+        [
+          "pós",
+          "aborto",
+          2
+        ],
+        [
+          "vida",
+          "gestante",
+          2
+        ],
+        [
+          "abandonaremos",
+          "falácia",
+          1
+        ],
+        [
+          "aborto",
+          "acabamos",
+          1
+        ],
+        [
+          "aborto",
+          "agravante",
+          1
+        ],
+        [
+          "aborto",
+          "cada",
+          1
+        ]
+      ],
+      "trigrams": [
+        [
+          "abandonaremos",
+          "falácia",
+          "violência",
+          1
+        ],
+        [
+          "aborto",
+          "acabamos",
+          "demonstrar",
+          1
+        ],
+        [
+          "aborto",
+          "agravante",
+          "solução",
+          1
+        ],
+        [
+          "aborto",
+          "cada",
+          "dois",
+          1
+        ],
+        [
+          "aborto",
+          "estupro",
+          "suicídio",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "Vontade popular",
+      "n": 1,
+      "bigrams": [
+        [
+          "contra",
+          "aborto",
+          4
+        ],
+        [
+          "brasileiros",
+          "são",
+          3
+        ],
+        [
+          "fundamentam",
+          "vontade",
+          3
+        ],
+        [
+          "legalização",
+          "aborto",
+          3
+        ],
+        [
+          "morais",
+          "fundamentam",
+          3
+        ],
+        [
+          "popular",
+          "sustenta",
+          3
+        ],
+        [
+          "princípios",
+          "morais",
+          3
+        ],
+        [
+          "vontade",
+          "popular",
+          3
+        ]
+      ],
+      "trigrams": [
+        [
+          "fundamentam",
+          "vontade",
+          "popular",
+          3
+        ],
+        [
+          "morais",
+          "fundamentam",
+          "vontade",
+          3
+        ],
+        [
+          "princípios",
+          "morais",
+          "fundamentam",
+          3
+        ],
+        [
+          "vontade",
+          "popular",
+          "sustenta",
+          3
+        ],
+        [
+          "dizia",
+          "rousseau",
+          "lei",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "Defesa do direito ao aborto legal",
+      "n": 1,
+      "bigrams": [
+        [
+          "aborto",
+          "legal",
+          2
+        ],
+        [
+          "anexo",
+          "forma",
+          2
+        ],
+        [
+          "art",
+          "ato",
+          2
+        ],
+        [
+          "art",
+          "ricd",
+          2
+        ],
+        [
+          "assinado",
+          "sâmia",
+          2
+        ],
+        [
+          "ato",
+          "mesa",
+          2
+        ],
+        [
+          "através",
+          "ponto",
+          2
+        ],
+        [
+          "bomfim",
+          "psol",
+          2
+        ]
+      ],
+      "trigrams": [
+        [
+          "anexo",
+          "forma",
+          "art",
+          2
+        ],
+        [
+          "art",
+          "ato",
+          "mesa",
+          2
+        ],
+        [
+          "art",
+          "ricd",
+          "art",
+          2
+        ],
+        [
+          "assinado",
+          "sâmia",
+          "bomfim",
+          2
+        ],
+        [
+          "através",
+          "ponto",
+          "sdr",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+      "n": 1,
+      "bigrams": [
+        [
+          "ativismo",
+          "judicial",
+          4
+        ],
+        [
+          "competência",
+          "legislativa",
+          3
+        ],
+        [
+          "ação",
+          "direta",
+          2
+        ],
+        [
+          "arguição",
+          "descumprimento",
+          2
+        ],
+        [
+          "associação",
+          "nacional",
+          2
+        ],
+        [
+          "ataques",
+          "nossas",
+          2
+        ],
+        [
+          "caracteriza",
+          "ameaça",
+          2
+        ],
+        [
+          "casa",
+          "ressaltar",
+          2
+        ]
+      ],
+      "trigrams": [
+        [
+          "ação",
+          "direta",
+          "inconstitucionalidade",
+          2
+        ],
+        [
+          "arguição",
+          "descumprimento",
+          "preceito",
+          2
+        ],
+        [
+          "associação",
+          "nacional",
+          "defensores",
+          2
+        ],
+        [
+          "ataques",
+          "nossas",
+          "instituições",
+          2
+        ],
+        [
+          "ativismo",
+          "judicial",
+          "usurpa",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "Direito Internacional (contra direitos sexuais e reprodutivos)",
+      "n": 1,
+      "bigrams": [
+        [
+          "costa",
+          "rica",
+          6
+        ],
+        [
+          "direitos",
+          "humanos",
+          5
+        ],
+        [
+          "josé",
+          "costa",
+          5
+        ],
+        [
+          "pacto",
+          "san",
+          4
+        ],
+        [
+          "ser",
+          "humano",
+          4
+        ],
+        [
+          "todo",
+          "ser",
+          4
+        ],
+        [
+          "americana",
+          "sobre",
+          3
+        ],
+        [
+          "convenção",
+          "americana",
+          3
+        ]
+      ],
+      "trigrams": [
+        [
+          "josé",
+          "costa",
+          "rica",
+          5
+        ],
+        [
+          "todo",
+          "ser",
+          "humano",
+          4
+        ],
+        [
+          "americana",
+          "sobre",
+          "direitos",
+          3
+        ],
+        [
+          "humano",
+          "distinção",
+          "vida",
+          3
+        ],
+        [
+          "pacto",
+          "san",
+          "josé",
+          3
+        ]
+      ]
+    },
+    {
+      "code": "Assassinato de bebês/nascituro/embriões/fetos",
+      "n": 1,
+      "bigrams": [
+        [
+          "aplicação",
+          "penas",
+          2
+        ],
+        [
+          "aborto",
+          "contudo",
+          1
+        ],
+        [
+          "aborto",
+          "execução",
+          1
+        ],
+        [
+          "aborto",
+          "sempre",
+          1
+        ],
+        [
+          "adiadas",
+          "mesmo",
+          1
+        ],
+        [
+          "anualmente",
+          "ventre",
+          1
+        ],
+        [
+          "apresentação",
+          "desta",
+          1
+        ],
+        [
+          "assassinados",
+          "anualmente",
+          1
+        ]
+      ],
+      "trigrams": [
+        [
+          "aborto",
+          "contudo",
+          "grande",
+          1
+        ],
+        [
+          "aborto",
+          "execução",
+          "premeditada",
+          1
+        ],
+        [
+          "aborto",
+          "sempre",
+          "homicídio",
+          1
+        ],
+        [
+          "adiadas",
+          "mesmo",
+          "oferta",
+          1
+        ],
+        [
+          "anualmente",
+          "ventre",
+          "mães",
+          1
+        ]
+      ]
+    },
+    {
+      "code": "Interpretação sistemática contra DSR",
+      "n": 1,
+      "bigrams": [
+        [
+          "código",
+          "civil",
+          6
+        ],
+        [
+          "convenção",
+          "americana",
+          4
+        ],
+        [
+          "direito",
+          "vida",
+          4
+        ],
+        [
+          "direitos",
+          "humanos",
+          4
+        ],
+        [
+          "direitos",
+          "nascituro",
+          4
+        ],
+        [
+          "americana",
+          "direitos",
+          3
+        ],
+        [
+          "constituição",
+          "federal",
+          3
+        ],
+        [
+          "criança",
+          "adolescente",
+          3
+        ]
+      ],
+      "trigrams": [
+        [
+          "americana",
+          "direitos",
+          "humanos",
+          3
+        ],
+        [
+          "convenção",
+          "americana",
+          "direitos",
+          3
+        ],
+        [
+          "artigo",
+          "estatuto",
+          "criança",
+          2
+        ],
+        [
+          "código",
+          "civil",
+          "brasileiro",
+          2
+        ],
+        [
+          "concepção",
+          "direitos",
+          "nascituro",
+          2
+        ]
+      ]
+    },
+    {
+      "code": "Autonomia e direitos sexuais e reprodutivos",
+      "n": 1,
+      "bigrams": [
+        [
+          "deve",
+          "ser",
+          3
+        ],
+        [
+          "corpo",
+          "deve",
+          2
+        ],
+        [
+          "esterilização",
+          "voluntária",
+          2
+        ],
+        [
+          "lei",
+          "trata",
+          2
+        ],
+        [
+          "número",
+          "filhos",
+          2
+        ],
+        [
+          "planejamento",
+          "familiar",
+          2
+        ],
+        [
+          "pós",
+          "parto",
+          2
+        ],
+        [
+          "próprio",
+          "corpo",
+          2
+        ]
+      ],
+      "trigrams": [
+        [
+          "lei",
+          "trata",
+          "planejamento",
+          2
+        ],
+        [
+          "sobre",
+          "corpo",
+          "deve",
+          2
+        ],
+        [
+          "trata",
+          "planejamento",
+          "familiar",
+          2
+        ],
+        [
+          "aborto",
+          "note",
+          "próprio",
+          1
+        ],
+        [
+          "ação",
+          "inconstitucionalidade",
+          "questiona",
+          1
+        ]
+      ]
+    }
+  ],
+  "doc_codes": {
+    "PDL-250-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+        "n": 8
+      },
+      {
+        "code": "Soberania Nacional (contra DSR)",
+        "n": 2
+      },
+      {
+        "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+        "n": 1
+      },
+      {
+        "code": "Menção a jurista (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Assassinato de bebês/nascituro/embriões/fetos",
+        "n": 1
+      }
+    ],
+    "PDL-251-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+        "n": 3
+      },
+      {
+        "code": "Saúde física e psicológica da mulher (contra DSR)",
+        "n": 1
+      }
+    ],
+    "PDL-259-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+        "n": 3
+      }
+    ],
+    "PDL-271-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+        "n": 2
+      },
+      {
+        "code": "Vontade popular",
+        "n": 1
+      }
+    ],
+    "PDL-381-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+        "n": 3
+      },
+      {
+        "code": "Defesa do direito ao aborto legal",
+        "n": 1
+      }
+    ],
+    "PDL-383-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+        "n": 2
+      },
+      {
+        "code": "Defesa do direito ao aborto legal",
+        "n": 1
+      }
+    ],
+    "PDL-385-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+        "n": 7
+      },
+      {
+        "code": "Defesa do direito ao aborto legal",
+        "n": 2
+      }
+    ],
+    "PDL-409-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+        "n": 3
+      }
+    ],
+    "PDL-410-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+        "n": 5
+      },
+      {
+        "code": "Combate ao acesso ao aborto",
+        "n": 1
+      }
+    ],
+    "PDL-413-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+        "n": 7
+      },
+      {
+        "code": "Saúde física e psicológica da mulher (pró DSR)",
+        "n": 1
+      },
+      {
+        "code": "Menção a jurista (pró DSR)",
+        "n": 1
+      },
+      {
+        "code": "Interpretação sistemática pró DSR",
+        "n": 1
+      },
+      {
+        "code": "Direito Internacional (pró direitos sexuais e reprodutivos)",
+        "n": 1
+      },
+      {
+        "code": "Autonomia e direitos sexuais e reprodutivos",
+        "n": 1
+      }
+    ],
+    "PDL-428-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+        "n": 8
+      },
+      {
+        "code": "Menção a jurista (pró DSR)",
+        "n": 1
+      }
+    ],
+    "PDL-472-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (a favor do direito ao aborto)",
+        "n": 5
+      },
+      {
+        "code": "Saúde física e psicológica da mulher (pró DSR)",
+        "n": 2
+      },
+      {
+        "code": "Política internacional conservadora",
+        "n": 2
+      },
+      {
+        "code": "Saúde física e psicológica da mulher (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Direito Internacional (pró direitos sexuais e reprodutivos)",
+        "n": 1
+      },
+      {
+        "code": "Autonomia e direitos sexuais e reprodutivos",
+        "n": 1
+      }
+    ],
+    "PDL-73-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+        "n": 4
+      },
+      {
+        "code": "Vontade popular",
+        "n": 3
+      },
+      {
+        "code": "Lei Natural",
+        "n": 1
+      },
+      {
+        "code": "Argumento científico contra DSR",
+        "n": 1
+      }
+    ],
+    "PL-1006-2019": [
+      {
+        "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      }
+    ],
+    "PL-1007-2019": [
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Aborto provocado por terceiro sem consentimento da gestante",
+        "n": 1
+      }
+    ],
+    "PL-1008-2019": [
+      {
+        "code": "Saúde física e psicológica da mulher (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      }
+    ],
+    "PL-1009-2019": [
+      {
+        "code": "Aborto por terceiro com lesão ou morte da gestante",
+        "n": 1
+      }
+    ],
+    "PL-10569-2018": [
+      {
+        "code": "Adoção",
+        "n": 2
+      },
+      {
+        "code": "Saúde física e psicológica da mulher (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Caracterização negativa de mulheres",
+        "n": 1
+      }
+    ],
+    "PL-10774-2018": [
+      {
+        "code": "Vontade popular",
+        "n": 3
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      }
+    ],
+    "PL-11105-2018": [
+      {
+        "code": "Extensão de direitos",
+        "n": 2
+      },
+      {
+        "code": "Contra pesquisas com embriões",
+        "n": 2
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Direito Civil e direitos do feto",
+        "n": 1
+      },
+      {
+        "code": "Contra a discriminação do nascituro",
+        "n": 1
+      },
+      {
+        "code": "Contra a clonagem",
+        "n": 1
+      },
+      {
+        "code": "Condenação à morte por crime dos pais",
+        "n": 1
+      }
+    ],
+    "PL-1787-2019": [
+      {
+        "code": "Benefício econômico contra aborto",
+        "n": 2
+      },
+      {
+        "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+        "n": 1
+      },
+      {
+        "code": "Interpretação sistemática contra DSR",
+        "n": 1
+      }
+    ],
+    "PL-1803-2019": [
+      {
+        "code": "Direito Internacional (pró direitos sexuais e reprodutivos)",
+        "n": 1
+      },
+      {
+        "code": "Autonomia e direitos sexuais e reprodutivos",
+        "n": 1
+      }
+    ],
+    "PL-1945-2020": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+        "n": 4
+      },
+      {
+        "code": "Argumento científico contra DSR",
+        "n": 3
+      },
+      {
+        "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+        "n": 2
+      },
+      {
+        "code": "Vontade popular",
+        "n": 1
+      },
+      {
+        "code": "Soberania Nacional (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Lei Natural",
+        "n": 1
+      },
+      {
+        "code": "Interpretação sistemática contra DSR",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Assassinato de bebês/nascituro/embriões/fetos",
+        "n": 1
+      },
+      {
+        "code": "Argumento sobre democracia (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Argumento ou referência religiosa",
+        "n": 1
+      }
+    ],
+    "PL-1979-2020": [
+      {
+        "code": "Precedente judicial contra DSR",
+        "n": 4
+      },
+      {
+        "code": "Interpretação sistemática contra DSR",
+        "n": 3
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Dignidade do feto",
+        "n": 1
+      }
+    ],
+    "PL-260-2019": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Combate ao acesso ao aborto",
+        "n": 1
+      }
+    ],
+    "PL-261-2019": [
+      {
+        "code": "Separação de Poderes - Legislativo vs. Executivo (contra direito ao aborto)",
+        "n": 2
+      },
+      {
+        "code": "Saúde física e psicológica da mulher (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Movimentos sociais contra o aborto",
+        "n": 1
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Caracterização negativa de mulheres",
+        "n": 1
+      },
+      {
+        "code": "Argumento ou referência religiosa",
+        "n": 1
+      }
+    ],
+    "PL-2893-2019": [
+      {
+        "code": "Saúde física e psicológica da mulher (contra DSR)",
+        "n": 7
+      },
+      {
+        "code": "Condenação à morte por crime dos pais",
+        "n": 5
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 4
+      },
+      {
+        "code": "Contra o aborto legal",
+        "n": 4
+      },
+      {
+        "code": "Sobre o artigo 128 do CP",
+        "n": 3
+      },
+      {
+        "code": "Direito Internacional (contra direitos sexuais e reprodutivos)",
+        "n": 3
+      },
+      {
+        "code": "Adoção",
+        "n": 2
+      },
+      {
+        "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+        "n": 1
+      },
+      {
+        "code": "Menção a Roe vs. Wade",
+        "n": 1
+      },
+      {
+        "code": "Interpretação sistemática contra DSR",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Direito Civil e direitos do feto",
+        "n": 1
+      },
+      {
+        "code": "Contra a autonomia da gestante",
+        "n": 1
+      },
+      {
+        "code": "Assassinato de bebês/nascituro/embriões/fetos",
+        "n": 1
+      },
+      {
+        "code": "Argumento científico contra DSR",
+        "n": 1
+      }
+    ],
+    "PL-3415-2019": [
+      {
+        "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+        "n": 2
+      },
+      {
+        "code": "Assassinato de bebês/nascituro/embriões/fetos",
+        "n": 2
+      },
+      {
+        "code": "Saúde física e psicológica da mulher (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Problemas socioeconômicos levam ao aborto (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Interpretação sistemática contra DSR",
+        "n": 1
+      },
+      {
+        "code": "Direito Internacional (contra direitos sexuais e reprodutivos)",
+        "n": 1
+      },
+      {
+        "code": "Direito Civil e direitos do feto",
+        "n": 1
+      }
+    ],
+    "PL-4149-2019": [
+      {
+        "code": "Vontade popular",
+        "n": 2
+      },
+      {
+        "code": "Dignidade do feto",
+        "n": 2
+      },
+      {
+        "code": "Separação de Poderes - Legislativo vs. Judiciário (contra o direito ao aborto)",
+        "n": 1
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Direito à Vida",
+        "n": 1
+      },
+      {
+        "code": "Assassinato de bebês/nascituro/embriões/fetos",
+        "n": 1
+      }
+    ],
+    "PL-4150-2019": [
+      {
+        "code": "Direito Internacional (contra direitos sexuais e reprodutivos)",
+        "n": 2
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Direito Civil e direitos do feto",
+        "n": 1
+      }
+    ],
+    "PL-4297-2020": [
+      {
+        "code": "Defesa do direito ao aborto legal",
+        "n": 5
+      }
+    ],
+    "PL-4515-2020": [
+      {
+        "code": "Autonomia e direitos sexuais e reprodutivos",
+        "n": 2
+      }
+    ],
+    "PL-4550-2020": [
+      {
+        "code": "Interpretação sistemática pró DSR",
+        "n": 1
+      },
+      {
+        "code": "Direito Internacional (pró direitos sexuais e reprodutivos)",
+        "n": 1
+      },
+      {
+        "code": "Defesa do direito ao aborto legal",
+        "n": 1
+      }
+    ],
+    "PL-518-2020": [
+      {
+        "code": "Vontade popular",
+        "n": 3
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 3
+      },
+      {
+        "code": "Saúde física e psicológica da mulher (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Menção a Roe vs. Wade",
+        "n": 1
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Eutanásia e suicídio assistido",
+        "n": 1
+      },
+      {
+        "code": "Dignidade do feto",
+        "n": 1
+      }
+    ],
+    "PL-5276-2020": [
+      {
+        "code": "Autonomia e direitos sexuais e reprodutivos",
+        "n": 2
+      }
+    ],
+    "PL-537-2020": [
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Extensão de direitos",
+        "n": 1
+      }
+    ],
+    "PL-564-2019": [
+      {
+        "code": "Direito Civil e direitos do feto",
+        "n": 3
+      },
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Interpretação sistemática contra DSR",
+        "n": 1
+      },
+      {
+        "code": "Direito Internacional (contra direitos sexuais e reprodutivos)",
+        "n": 1
+      }
+    ],
+    "PL-5799-2019": [
+      {
+        "code": "Início da vida desde a concepção",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Dignidade do feto",
+        "n": 1
+      }
+    ],
+    "PL-580-2020": [
+      {
+        "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+        "n": 3
+      },
+      {
+        "code": "Combate ao acesso ao aborto",
+        "n": 3
+      },
+      {
+        "code": "Direito Internacional (contra direitos sexuais e reprodutivos)",
+        "n": 2
+      },
+      {
+        "code": "Soberania Nacional (contra DSR)",
+        "n": 1
+      },
+      {
+        "code": "Lei Natural",
+        "n": 1
+      },
+      {
+        "code": "Direito à vida do feto",
+        "n": 1
+      },
+      {
+        "code": "Assassinato de bebês/nascituro/embriões/fetos",
+        "n": 1
+      }
+    ],
+    "PL-581-2020": [
+      {
+        "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+        "n": 3
+      },
+      {
+        "code": "Assassinato de bebês/nascituro/embriões/fetos",
+        "n": 2
+      },
+      {
+        "code": "Menção a filósofo/teórico do direito",
+        "n": 1
+      },
+      {
+        "code": "Lei Natural",
+        "n": 1
+      }
+    ],
+    "PL-6333-2019": [
+      {
+        "code": "Fortalecimento da via penal (contra direitos sexuais e reprodutivos)",
+        "n": 3
+      }
+    ],
+    "PL-9559-2018": [
+      {
+        "code": "Saúde física e psicológica da mulher (pró DSR)",
+        "n": 1
+      },
+      {
+        "code": "Fortalecimento da via penal (pró direitos sexuais e reprodutivos)",
+        "n": 1
+      },
+      {
+        "code": "Autonomia e direitos sexuais e reprodutivos",
+        "n": 1
+      }
+    ]
+  },
+  "meta": {
+    "total_docs": 45,
+    "total_highlights": 287,
+    "total_codes": 48
+  }
+}
