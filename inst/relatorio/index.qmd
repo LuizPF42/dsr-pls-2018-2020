@@ -103,53 +103,45 @@ Plot.plot({
 
 ## Polaridade por documento
 
-Cada barra representa um PL ou PDL. Como há apenas duas categorias (pró e contra) cuja soma é 100%, cada documento aparece como **uma única barra** com a proporção de segmentos pró DSR. A cor indica a polaridade dominante: <span style="color:#1D9E75">■</span> ≥ 50% pró DSR, <span style="color:#D85A30">■</span> < 50% pró DSR. As barras estão ordenadas da maior para a menor proporção pró DSR.
+Cada barra representa um PL ou PDL, normalizada para 100% para facilitar a comparação. <span style="color:#D85A30">■</span> segmentos contra DSR, <span style="color:#1D9E75">■</span> segmentos pró DSR. As barras estão ordenadas da maior para a menor proporção pró DSR.
 
 ```{ojs}
 //| label: polarity-chart
 
-polarityBars = data.doc_polarity.map(d => {
+polarityNorm = data.doc_polarity.flatMap(d => {
   const total = d.contra + d.pro
-  const proPct = total > 0 ? d.pro / total : 0
-  return {
-    doc: d.doc,
-    proPct,
-    side: proPct >= 0.5 ? "pro" : "contra",
-    pctPro: Math.round(proPct * 100),
-    pctContra: Math.round((1 - proPct) * 100),
-    total: d.total
-  }
+  const contraPct = total > 0 ? d.contra / total : 0
+  const proPct    = total > 0 ? d.pro    / total : 0
+  return [
+    { doc: d.doc, x1: 0,         x2: contraPct,           type: "contra", total: d.total, pct: Math.round(contraPct * 100) },
+    { doc: d.doc, x1: contraPct, x2: contraPct + proPct,  type: "pro",    total: d.total, pct: Math.round(proPct * 100) }
+  ]
 })
 
-docOrder = polarityBars.slice().sort((a, b) => b.proPct - a.proPct).map(d => d.doc)
+docOrder = data.doc_polarity.slice()
+  .map(d => ({ doc: d.doc, proPct: (d.contra + d.pro) > 0 ? d.pro / (d.contra + d.pro) : 0 }))
+  .sort((a, b) => b.proPct - a.proPct)
+  .map(d => d.doc)
 
 Plot.plot({
   marginLeft: 160,
-  marginRight: 60,
+  marginRight: 40,
   height: 700,
   x: {
-    label: "Proporção de segmentos pró DSR",
+    label: "Proporção de segmentos (contra ← | → pró DSR)",
     tickFormat: d => `${Math.round(d * 100)}%`,
     grid: true,
     domain: [0, 1]
   },
   y: { label: null, domain: docOrder },
   marks: [
-    Plot.barX(polarityBars, {
-      x: "proPct",
+    Plot.barX(polarityNorm, {
+      x1: "x1",
+      x2: "x2",
       y: "doc",
-      fill: d => d.side === "pro" ? "#1D9E75" : "#D85A30",
-      title: d => `${d.doc}\nPró DSR: ${d.pctPro}% · Contra DSR: ${d.pctContra}%\n(${d.total} segmentos)`,
+      fill: d => d.type === "pro" ? "#1D9E75" : "#D85A30",
+      title: d => `${d.type === "pro" ? "Pró DSR" : "Contra DSR"}: ${d.pct}% (${d.total} segmentos total)`,
       tip: true
-    }),
-    Plot.text(polarityBars, {
-      x: "proPct",
-      y: "doc",
-      text: d => `${d.pctPro}%`,
-      textAnchor: "start",
-      dx: 6,
-      fontSize: 11,
-      fill: "#5F5E5A"
     }),
     Plot.ruleX([0.5], { stroke: "#B4B2A9", strokeDasharray: "4,2" })
   ]
