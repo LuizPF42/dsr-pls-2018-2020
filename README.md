@@ -12,13 +12,13 @@ A extração do corpus e o desenvolvimento das ferramentas de análise foram rea
 
 ## Sobre o projeto
 
-Este repositório contém o código e os dados de uma análise exploratória de proposições legislativas brasileiras (2018–2020) relacionadas a direitos sexuais e reprodutivos (DSR). O corpus foi codificado qualitativamente via Taguette (usa estrutura Recogito?) e exportado para análise e visualização em R e Quarto.
+Este repositório contém o código e os dados de uma análise exploratória de proposições legislativas brasileiras (2018–2020) relacionadas a direitos sexuais e reprodutivos (DSR). O corpus foi codificado qualitativamente via [Taguette](https://www.taguette.org/about.html) e exportado para análise e visualização em R e Quarto.
+
+As visualizações partem dos códigos analíticos atribuídos às proposições e incluem: frequência de códigos por polaridade, distribuição de polaridade por documento, posição média dos códigos no texto, n-gramas por categoria, e exploração individual por PL/PDL.
 
 ## Extração do corpus
 
 As proposições foram extraídas da [API de Dados Abertos da Câmara dos Deputados](https://dadosabertos.camara.leg.br/swagger/api.html), cobrindo o período de 1988 a 2020. Para cada ano, foram baixados os arquivos JSON de proposições disponibilizados pela API.
-
-A seleção das proposições relevantes foi feita por busca textual nas ementas, combinando dois grupos de termos:
 
 A seleção das proposições relevantes foi feita por busca textual nas ementas, combinando dois grupos de termos:
 
@@ -35,17 +35,13 @@ A seleção das proposições relevantes foi feita por busca textual nas ementas
 
 O corpus final foi restrito às proposições do período 2018–2020 para análise qualitativa.
 
-**Visualizações** — aparecem a partir dos códigos.
-
-As visualizações incluem: frequência de códigos analíticos por polaridade, distribuição de polaridade por documento, posição média dos códigos no texto, n-gramas por categoria, e exploração individual por PL/PDL.
-
 ## Estrutura do repositório
 
 ```
 dsr_pilot.qmd       # documento Quarto com as visualizações (Observable JS)
 export_data.R       # script R que exporta o banco SQLite para dsr_data.json
 dsr_data.json       # dados exportados (gerado por export_data.R)
-data_raw/           # banco SQLite original do Recogito (não versionado)
+data_raw/           # banco SQLite do Taguette (não versionado)
 ```
 
 ## Reprodução local
@@ -83,4 +79,16 @@ quarto render dsr_pilot.qmd
 - O HTML gerado é autocontido (`embed-resources: true`): um único arquivo sem dependências externas
 - Os dados ficam embutidos no JSON; o browser não acessa o banco SQLite diretamente
 - As visualizações usam [Observable Plot](https://observablehq.com/plot/) via Quarto OJS
-- O banco SQLite original não está versionado por conter dados de projeto em andamento
+- O banco SQLite do Taguette não está versionado por conter dados de projeto em andamento
+
+## To-do
+
+- [ ] Cruzar PLs com autores e partidos via API da Câmara
+- [ ] Visualizações sobre posicionamento por partido
+- [ ] Visualizações sobre posicionamento por conteúdo argumentativo
+- [ ] Análise de co-autoria e redes partidárias por posição
+- [ ] Série temporal: evolução do volume de proposições por ano (1988–2020)
+- [ ] Comparação entre PLs aprovados, arquivados e em tramitação
+- [ ] Extração e análise dos textos integrais (não só ementas) para recodificação
+- [ ] Expansão do corpus para outras casas legislativas (Senado, assembleias estaduais)
+- [ ] Integração com dados de votações nominais para verificar coerência entre autoria e voto
